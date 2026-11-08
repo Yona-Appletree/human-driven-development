@@ -21,4 +21,4 @@ Never edit an `.md` file in this repository unless:
 If a human author asks for your help with a markdown file:
 
 1. offer suggestions for them to change.
-2. ffer to create a companion `.ai.md` file with your contributions.
+2. offer to create a companion `.ai.md` file with your contributions.

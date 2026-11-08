@@ -1,6 +1,19 @@
-# Intent driven development
+# Human driven development
 
-Intent driven development is a process that prioritizes the human authorship of a program's theory while leverging agents to assist in code writing and similar tasks.
+Human driven development is a software development process where humans drive, own, and understand what they build using agents.
+
+In HDD, humans build [the theory of the software](https://gwern.net/doc/cs/algorithm/1985-naur.pdf) in their minds, write their **intent** for its implementation, and agents built it.
+
+It is a [spec-driven-development](https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) process that emphasizes human authorship.
+
+## Purpose
+
+This project is place for me to define my personal take on SDD and reuse for my personal and professional projects.
+
+If you find it useful, great!
+I would love to hear your thoughts on it.
+
+PRs are welcome, though I make no promises on reviewing or merging them.
 
 ## Intent
 
