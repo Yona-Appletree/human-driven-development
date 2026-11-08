@@ -13,14 +13,18 @@ Start by determining the nature of the change, either from the initial prompt or
 When ready:
 1. pick the `<change-slug>`
 2. create the `<change-dir>`
-3. create the `<worktree>`
+3. create the `<change-worktree>`
 
 Tell the user the full paths to these directories so they can easily open them in an IDE.
 
 ## P2. Requirements and design
 
 Work from the worktree you created or already exists.
-Watch the `intent/` directory for changes and react to them. Use a small debounce timeout ~30s to avoid flapping.
+Watch the `<change-worktree>/intent` directory for changes and react to them.
+Use a small debounce timeout ~30s to avoid flapping.
+
+If the harness doesn't support watching, tell the user and look for changes when they respond.
+Remind them they can say "c" or "continue" or something else short for you to loop.
 
 Encourage the user to start a change by thinking about requirements.
 They may or may not follow this, go with what they choose.
@@ -45,9 +49,9 @@ When changes are done and ready for implementation, you may help the user:
 The user may solicit outside review before they implement, but that's up to them.
 
 Offer to implement the changes when ready.
-If you think useful, you may create a `notes.ai.md` file in the context directory.
+If you think useful, you may create a `<change-dir>/notes.ai.md`.
 The implementing agent may use this.
 Notes should not take the place of intent.
 They serve as supplemental context drawn from your conversation with the user to steer the implementation in the direction you think the user most likely to want while not deviating from the intent.
 
-Use a sub-agent with the [intent-implement](./intent-implement.md) skill to implement the changes.
+Use a sub-agent with the [hdd-implement](./hdd-implement.md) skill to implement the changes.

@@ -1,6 +1,6 @@
 
 # Stores transient context for changes
-.context
+.changes
 
 # Worktrees for the repo
 .worktrees

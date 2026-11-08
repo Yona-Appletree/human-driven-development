@@ -4,6 +4,13 @@ The skills defined in this directory implement the human-driven-development proc
 
 Concepts shared acoss the skills are defined here.
 
+Skills are defined at `<repo>/skills` and are symlinked for use with Claude and Codex in the project (e.g. `<repo>/.claude/skills`)
+
+## Repo and worktree
+
+`<repo>` refers to the root of the primary checkout of the repo.
+`<change-worktree>` refers to the worktree for the change.
+
 ## Change slug and id
 
 The `<change-slug>` is a short `kebab-cased` identifier for a change.
@@ -21,6 +28,12 @@ The standard location is: `<repo>/.changes/<change-id>`
 It is gitignored.
 
 It is managed by agents.
+
+## Change branch
+
+The `<change-branch>` is the git branch where the change is made.
+
+The standard name is `change/<change-slug>`
 
 ## Change worktrees
 

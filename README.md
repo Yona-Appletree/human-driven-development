@@ -77,4 +77,4 @@ What remains is a lossy "projection" of the original user intent and theory, and
 
 Credit to Eshan Hoque for the idea
 
-Prior art includes anchored spec-driven development methods
+1. [Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl, Oct 2025](https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
