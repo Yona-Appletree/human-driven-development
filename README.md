@@ -18,7 +18,7 @@ PRs are welcome, though I make no promises on reviewing or merging them.
 ## Intent
 
 Intent is the structured, human-authored words that descibe what a program does.
-When interactivly coding with an agent, the prompts are the intent. 
+When interactivly coding with an agent, the prompts are the intent.
 
 In this process, intent is a series of statements about what the application does, usually in the simple present tense:
 
@@ -31,7 +31,7 @@ Overdue todo items are indicated with a warning.
 ```
 
 Intent files are organized into a strcuture that matches the author's theory of the program.
-Using `_`-prefixed files is encourged to keep 
+Using `_`-prefixed files is encourged to keep
 
 Example:
 

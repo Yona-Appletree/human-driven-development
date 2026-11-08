@@ -11,6 +11,7 @@ It follows these phases:
 Start by determining the nature of the change, either from the initial prompt or initial conversations with the user.
 
 When ready:
+
 1. pick the `<change-slug>`
 2. create the `<change-dir>`
 3. create the `<change-worktree>`

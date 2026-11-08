@@ -48,12 +48,12 @@ If provided, use it, but symlink it to `<repo>/.worktrees/<change-id>` for consi
 
 Intent commits include changes to the `intent/` directory.
 
-They should contain only intent. 
+They should contain only intent.
 
 They should omit any co-authorship indicator if possible, such as "Co-Authored-By", unless the agent directly authored the intent.
 
-Their commit messages should quote the intent if possible to convey meaning. 
+Their commit messages should quote the intent if possible to convey meaning.
 Light editing and summarizing are acceptable.
 
-Rationale: humans often commit with `git add -A` and very simple commit messages. 
+Rationale: humans often commit with `git add -A` and very simple commit messages.
 Agent-commits tend to be cleaner and more targeted.
