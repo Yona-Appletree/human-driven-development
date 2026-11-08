@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaryDefinitions": [
+    { "name": "project", "path": "./dictionary.txt", "addWords": true }
+  ],
+  "dictionaries": ["project"],
+  "ignorePaths": [
+    "node_modules",
+    ".changes",
+    ".worktrees",
+    "package-lock.json",
+    "dictionary.txt"
+  ]
+}

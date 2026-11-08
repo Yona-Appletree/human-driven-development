@@ -4,3 +4,10 @@
 
 # Worktrees for the repo
 .worktrees
+
+# Node tooling
+node_modules
+
+# JetBrains: share only the required-plugins list
+.idea/*
+!.idea/externalDependencies.xml

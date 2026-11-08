@@ -1,0 +1,11 @@
+// markdownlint config, shared by the CLI (`npm run lint:md`, `npm run format`)
+// and the VS Code markdownlint extension.
+{
+  "config": {
+    "default": true,
+    // Intent is written one sentence per line, so lines are often long.
+    "MD013": false
+  },
+  "globs": ["**/*.md"],
+  "ignores": ["node_modules/**", ".changes/**", ".worktrees/**"]
+}

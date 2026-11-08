@@ -1,0 +1,8 @@
+cksum
+Ehsan
+Hoque
+Kiro
+Naur
+Tessl
+worktree
+worktrees

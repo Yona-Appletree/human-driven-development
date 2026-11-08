@@ -1,0 +1,15 @@
+{
+  "name": "human-driven-development",
+  "private": true,
+  "description": "Hygiene tooling for this repo: markdown linting/formatting and spell checking.",
+  "scripts": {
+    "lint": "npm run lint:md && npm run lint:spell",
+    "lint:md": "markdownlint-cli2",
+    "lint:spell": "cspell --no-progress --gitignore .",
+    "format": "markdownlint-cli2 --fix"
+  },
+  "devDependencies": {
+    "cspell": "^10.4.1",
+    "markdownlint-cli2": "^0.24.0"
+  }
+}
