@@ -22,6 +22,14 @@ These are shared by all HDD skills.
 
 `.changes` and `.worktrees` should both be gitignored. If they aren't, tell the user.
 
+### Intent commits
+
+Intent commits are commits that include intent changes. They contain only intent: commit code and other changes separately.
+
+- Omit co-authorship trailers such as `Co-Authored-By`, even if your harness adds them by default, unless you directly authored the intent.
+- Quote the intent in the commit message where possible to convey its meaning. Light editing and summarizing are fine.
+- If the user gives a reason or rationale when asking for the commit, include it. If they don't, you may ask for one, but don't insist.
+
 ## P1. Establish change identity
 
 Determine the nature of the change, from the initial prompt or from talking with the user.
@@ -61,7 +69,7 @@ Help the user:
 
 When the changes are done and ready for implementation, you may help the user:
 
-1. Commit the changes.
+1. Commit the changes, following the intent commit rules above.
 2. Push them and create the PR. Quote the user's intent as much as possible in the description.
 
 The user may get outside review before implementing; that's up to them.
