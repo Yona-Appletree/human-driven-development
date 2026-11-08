@@ -30,6 +30,18 @@ Todo items with a due date in the past are **late**.
 Overdue todo items are indicated with a warning.
 ```
 
+Intent does not have to be very specific:
+
+```text
+Secrets stored in the database are encrypted following best practices for a web app.
+```
+
+This is acceptable because it records what the author intended.
+It is arguably better than the author trying to come up with specifics beyond what they understand.
+If they want to improve it later, that is an intent change, which is fine.
+
+## Intent structure
+
 Intent files are organized into a strcuture that matches the author's theory of the program.
 Using `_`-prefixed files is encourged to keep
 
