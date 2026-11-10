@@ -24,8 +24,20 @@ See [README.ai.md](./README.ai.md) for information about this project until a pe
 
 ## Intent scaffolding
 
-An agent can create the intial `_intent/_intent.md` directory and file (without content).
+Create the initial `_intent/` directory and `.gitignore` in it.
 
-Intent for the implementation skills can be copied from this repo and the skills built.
+Create `_intent/_intent.md` with:
+
+```text
+# Intent
+
+This directory describes what the software does, following [human-driven-development](https://github.com/Yona-Appletree/human-driven-development).
+```
+
+Intent for the implementation skills is copied as well.
+
+Offer to copy the hygiene intent as well, but let the user decide.
 
 The agent should guide the user to write a high level intent statement that matches the repository.
+
+Use the `hdd-implement` skill to implement the initial intent (the skills and hygiene).

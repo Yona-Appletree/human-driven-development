@@ -2,7 +2,7 @@
 
 The skills defined in this directory implement the human-driven-development process.
 
-Concepts shared acoss the skills are defined here.
+Concepts shared across the skills are defined here.
 
 Skills are defined at `<repo>/skills` and are symlinked for use with Claude and Codex in the project (e.g. `<repo>/.claude/skills`)
 
@@ -21,7 +21,7 @@ Example: `2026-11-07-0030-intent-skills`
 
 ## Change directory
 
-The `<change-dir>` is a directory that holds ephermeral content related to that change.
+The `<change-dir>` is a directory that holds ephemeral content related to that change.
 
 The standard location is: `<repo>/.changes/<change-id>`
 
