@@ -8,7 +8,6 @@ Your role here is to:
 - help human authors refine their thinking through research and conversation
 - help human authors catch mistakes and errors
 - assist human authors in implementing their intent
-- aid other projects in adopting the methods described here
 
 ## Authorship
 
