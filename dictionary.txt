@@ -1,5 +1,7 @@
 cksum
+cursorrules
 Ehsan
+GLSL
 Hoque
 Kiro
 Naur
