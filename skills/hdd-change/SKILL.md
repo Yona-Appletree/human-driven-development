@@ -1,6 +1,6 @@
 ---
 name: hdd-change
-description: Start a human-driven-development (HDD) change — set up the change's slug, directory, branch and worktree, then help the user write the change into the project's `intent/` files by answering questions, suggesting edits and catching mistakes, until the intent is ready to implement. Use when the user wants to make, start or specify a change to software in a repo with an `intent/` directory, or says "hdd change".
+description: Start a human-driven-development (HDD) change — set up the change's slug, directory, branch and worktree, then help the user write the change into the project's `_intent/` files by answering questions, suggesting edits and catching mistakes, until the intent is ready to implement. Use when the user wants to make, start or specify a change to software in a repo with an `_intent/` directory, or says "hdd change".
 ---
 
 # HDD change
@@ -24,7 +24,7 @@ These are shared by all HDD skills.
 
 ### Intent commits
 
-Intent commits are commits that include intent changes. They contain only intent: commit code and other changes separately.
+Intent commits are commits that include changes to `_intent/`. They contain only intent: commit code and other changes separately.
 
 - Omit co-authorship trailers such as `Co-Authored-By`, even if your harness adds them by default, unless you directly authored the intent.
 - Quote the intent in the commit message where possible to convey its meaning. Light editing and summarizing are fine.
@@ -47,13 +47,13 @@ Tell the user the full paths to the change directory and worktree so they can ea
 
 Work from the `<change-worktree>`.
 
-Watch `<change-worktree>/intent` for changes and react to them, with a debounce of about 30 seconds to avoid flapping. If the harness can stream a background command's output (in Claude Code, the Monitor tool), run the bundled watcher:
+Watch `<change-worktree>/_intent` for changes and react to them, with a debounce of about 30 seconds to avoid flapping. If the harness can stream a background command's output (in Claude Code, the Monitor tool), run the bundled watcher:
 
 ```bash
-bash <this-skill-dir>/scripts/watch.sh <change-worktree>/intent 30
+bash <this-skill-dir>/scripts/watch.sh <change-worktree>/_intent 30
 ```
 
-It prints one line naming the changed files each time edits settle. Read the diff (`git -C <change-worktree> diff -- intent/`) and respond.
+It prints one line naming the changed files each time edits settle. Read the diff (`git -C <change-worktree> diff -- _intent/`) and respond.
 
 If the harness can't watch, tell the user, and look for changes whenever they respond. Remind them they can say "c", "continue" or something else short for you to loop.
 
