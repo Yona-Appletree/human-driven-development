@@ -16,6 +16,16 @@ To meet these requirements, this design emerged:
 2. Other humans can review the intent.
 3. Agents implement the software based on diffs of the intent.
 
+## Adopting
+
+Use a prompt like this with your agent:
+
+```text
+I want to adopt https://github.com/Yona-Appletree/human-driven-development
+
+Help me walk through setting it up for this repository by following the skills/hdd-adopt/SKILL.md in the repo.
+```
+
 ## Purpose
 
 This is a personal project, a place to hold my thoughts, process, and agent skills.
@@ -52,8 +62,8 @@ If they want to improve it later, that is an intent change, which is fine.
 
 ## Intent structure
 
-Intent files are organized into a strcuture that matches the author's theory of the program.
-Using `_`-prefixed files is encourged to keep
+Intent files are organized into a structure that matches the author's theory of the program.
+Using `_`-prefixed files keeps directory summaries at the top of file lists and with a filename that indicates what they are for.
 
 Example:
 
@@ -92,12 +102,12 @@ This way people don't have to review ai-generated content, while still having a 
 
 ## Comparison with other processes
 
-In standard iterative procsses with agents, the intent is stored only in the transcript with the agent, and lost when the conversation is over.
+In standard iterative process with agents, the intent is stored only in the transcript with the agent, and lost when the conversation is over.
 
 What remains is a lossy "projection" of the original user intent and theory, and it is difficult to recover what the prompter was thinking after the fact.
 
 ## Credit & prior art
 
-Credit to Eshan Hoque for the idea
+Many thanks and credit to [Ehsan Hoque](https://github.com/ehsanul) for the "intent-driven-development" concept that inspired this repo.
 
 1. [Understanding Spec-Driven-Development: Kiro, spec-kit, and Tessl, Oct 2025](https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html)
