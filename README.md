@@ -2,13 +2,25 @@
 
 Human driven development is a software development process where humans drive, own, and understand what they build using agents.
 
-In HDD, humans build [the theory of the software](https://gwern.net/doc/cs/algorithm/1985-naur.pdf) in their minds, write their **intent** for its implementation, and agents built it.
+I was motivated to create it after using chat-based agentic methods and getting frustrated with the feeling of not understanding the code.
 
-It is a [spec-driven-development](https://www.martinfowler.com/articles/exploring-gen-ai/sdd-3-tools.html) process that emphasizes human authorship.
+I designed it around these requirements:
+
+1. I want to own the [theory of the software](https://gwern.net/doc/cs/algorithm/1985-naur.pdf)
+2. I want my changes to the software to be reviewed
+3. I don't want to review AI-authored text
+
+To meet these requirements, this design emerged:
+
+1. The intent of the software is written by humans.
+2. Other humans can review the intent.
+3. Agents implement the software based on diffs of the intent.
 
 ## Purpose
 
-This project is place for me to define my personal take on SDD and reuse for my personal and professional projects.
+This is a personal project, a place to hold my thoughts, process, and agent skills.
+
+I use it to onboard personal and professional projects to this process.
 
 If you find it useful, great!
 I would love to hear your thoughts on it.
@@ -18,9 +30,7 @@ PRs are welcome, though I make no promises on reviewing or merging them.
 ## Intent
 
 Intent is the structured, human-authored words that descibe what a program does.
-When interactivly coding with an agent, the prompts are the intent.
-
-In this process, intent is a series of statements about what the application does, usually in the simple present tense:
+It says what the software does in the simple present tense:
 
 ```text
 # todo.md
