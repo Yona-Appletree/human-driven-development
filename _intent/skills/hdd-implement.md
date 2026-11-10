@@ -43,6 +43,7 @@ The root implementing agent keeps a log in `<change-dir>/<round-id>/impl-log.ai.
 
 The log consists of records, each with a type, anchor, and note.
 The anchor is the file or command most relevant.
+Sub-agents report log entries to the root agent for adding to the log.
 
 The types are:
 
@@ -63,6 +64,23 @@ The report is kept out of the `<round-dir>` for discoverability by the user.
 The report contains a summary of the implementation, based on the log, with a link to the log.
 Near the top, it contains any suggested intent changes, for clarification or correction.
 These changes are suggested in diff format, with markdown links to the files.
+
+## Interpreting intent
+
+Intent is not always specific, by design.
+
+When interpreting intent, balance these concerns:
+
+1. Minimize change: make the smallest reasonable change that matches intent.
+2. Maximize correctness: try to follow the intent and keep the software consistent.
+3. Best practices: follow best practices for the problem and domain; log your assumptions.
+
+For brownfield/existing code, err on the side of minimizing change.
+For greenfield/new code, prioritize correctness and best practices.
+
+When the intent changes but the software could satisfy both new and old, be pragmatic.
+If it appears the user is just rewording or reorganizing intent, make no changes; log this as a decision.
+If the user seems to be refining a concept or specifying something new, try to match it.
 
 ## Intent conflicts
 
