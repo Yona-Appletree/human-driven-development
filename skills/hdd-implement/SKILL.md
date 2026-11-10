@@ -33,6 +33,7 @@ Determine what intent diff you're being asked to implement. Common cases:
 1. **A PR exists.** Its base branch is the base. Everything should be committed and pushed.
 2. **A bare feature branch.** Offer to create the PR. Assume `main` as the base unless there's a reason to use something else (like `dev` on some repos).
 3. **Uncommitted intent changes.** Offer to commit them (as an intent commit), create the `<change-branch>` and the PR.
+4. **A backfill checkpoint.** `hdd-backfill` hands you `.gen.md` files describing the current code. See [Backfill rounds](#backfill-rounds).
 
 If there's no PR, use your judgement for the base: `main`, `dev`, `trunk`, or whatever seems correct for the repo. Stop and ask the user if it isn't clear.
 
@@ -55,6 +56,14 @@ Each round has a `<round-id>` of the form `round-##`, starting at `round-01` and
      `git diff <previous-start> <start> -- _intent/`
    - If a recorded commit no longer exists (e.g. after a rebase), stop and ask the user which base to use.
 4. Read `<change-dir>/notes.ai.md` if it exists. It is supplemental context; it never overrides intent.
+
+### Backfill rounds
+
+A backfill checkpoint is a round whose intent diff comes from `.gen.md` files rather than git history. For each `<name>.gen.md` beside an intent file, the diff is from the `.gen.md` to the user's intent:
+
+`git diff --no-index -- <name>.gen.md <name>.md`
+
+The user has already reconciled the differences, so the remaining ones are changes they chose to keep; the caller may pass that list. Implement those, and expect little else to change. The round still records its start commit as usual, so later rounds diff from the checkpoint.
 
 ### Implementing
 
