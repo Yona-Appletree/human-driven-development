@@ -29,8 +29,8 @@ PRs are welcome, though I make no promises on reviewing or merging them.
 
 ## Intent
 
-Intent is the structured, human-authored words that descibe what a program does.
-It says what the software does in the simple present tense:
+Intent is the structured, human-authored description of what software does.
+It is stated in the simple present tense:
 
 ```text
 # todo.md
