@@ -1,4 +1,4 @@
-# Code hygine
+# Code hygiene
 
 A linter provides auto-formatting for markdown files.
 

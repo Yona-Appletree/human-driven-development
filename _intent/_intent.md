@@ -2,7 +2,7 @@
 
 This project defines an implementation of spec-anchored spec-driven development called human-driven-development.
 
-It provides skills, editor hygine, and examples.
+It provides skills, editor hygiene, and examples.
 
 ## Requirements
 

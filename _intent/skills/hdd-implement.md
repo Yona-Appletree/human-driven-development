@@ -10,6 +10,7 @@ Common cases:
 1. PR base branch. In this case, everything should be committed and pushed.
 2. Bare feature branch. In this case, offer to create the PR. Assume `main` as the base unless there is a reason to use something else (like `dev` on some repos).
 3. Uncommitted changes. In this case, offer to commit changes, create the branch, and the PR.
+4. A `.gen.md` intent file used for backfill.
 
 Be flexible on process but firm on human-authorship of intent.
 
