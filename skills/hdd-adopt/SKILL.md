@@ -69,7 +69,7 @@ Run the repository's build, tests and checks: references in code changed. Fix an
    ```
 
 3. Copy the HDD skill intent from `<hdd-repo>/_intent/skills/` (`_skills.md`, `hdd-change.md`, `hdd-implement.md`, `hdd-backfill.md`) into `<repo>/_intent/skills/`.
-4. Offer to copy the hygiene intent (`<hdd-repo>/_intent/hygine.md`: markdown formatting, spell checking, editor configs) as well. Let the user decide.
+4. Offer to copy the hygiene intent (`<hdd-repo>/_intent/hygiene.md`: markdown formatting, spell checking, editor configs) as well. Let the user decide.
 5. Commit the copied intent as an intent commit (no co-authorship trailer: it's the HDD authors' intent, copied, not written by you).
 6. Implement the initial intent (the skills, and hygiene if chosen) with the `hdd-implement` skill. The repository doesn't have it yet, so follow `<hdd-repo>/skills/hdd-implement/SKILL.md`. `<hdd-repo>/skills/` holds builds of the same skill intent, including their `scripts/`; use them as the reference builds. The skills go in `<repo>/skills/<name>/`, symlinked into `<repo>/.claude/skills/` and `<repo>/.agents/skills/`.
 
