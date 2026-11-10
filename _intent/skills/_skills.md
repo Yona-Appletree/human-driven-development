@@ -46,7 +46,7 @@ If provided, use it, but symlink it to `<repo>/.worktrees/<change-id>` for consi
 
 ## Intent commits
 
-Intent commits include changes to the `intent/` directory.
+Intent commits include changes to the `_intent/` directory.
 
 They should contain only intent.
 

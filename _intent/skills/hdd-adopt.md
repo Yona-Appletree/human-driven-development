@@ -18,7 +18,7 @@ This repo's `AGENTS.md` is copied into the target repo.
 
 A dummy `README.md` is created with this content:
 
-```
+```md
 See [README.ai.md](./README.ai.md) for information about this project until a person rewrites the readme.
 ```
 

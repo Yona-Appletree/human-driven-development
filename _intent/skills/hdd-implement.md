@@ -17,6 +17,60 @@ Ensure the `<change-slug>` has been chosen, choose it if not.
 
 Create the `<change-dir>` and `<change-worktree>` if not already done.
 
-## P1. Plan
+## Implementation rounds
 
-Plan the changes.
+In HDD, implementation happens in rounds:
+
+- the agent implements
+- the user reviews and updates intent
+- the agent implements again
+
+Each round gets a `<round-id>` in the form `round-##` such as `round-01`.
+The rounds start at `01` and increment for each round.
+
+Rounds record the git commit hash they started from.
+Before starting, commit any uncommitted intent changes.
+
+Rounds use the intent diff from the previous round.
+The first round uses the PR base branch.
+When there is no PR, the agent uses its judgement: `main`, `dev`, `trunk`, or whatever seems correct for the repo.
+Stop and ask the user if it isn't clear which branch to use.
+
+Plan your changes, writing planning artifacts in the `<round-dir>`: `<change-dir>/<round-id>`.
+Use sub-agents, concurrency, and best practices for implementing changes.
+
+The root implementing agent keeps a log in `<change-dir>/<round-id>/impl-log.ai.md`.
+
+The log consists of records, each with a type, anchor, and note.
+The anchor is the file or command most relevant.
+
+The types are:
+
+1. **Decision**: the agent made an implementation decision where intent left something unclear.
+2. **Assumption**: the agent made an assumption about something that, if untrue, might cause the implementation to be wrong.
+3. **Conflict**: the agent found a conflict in the intent.
+4. **Defect**: the agent accepted a minor defect as won't fix, such as an unlikely race condition or validation issue.
+
+Rounds end with standard correctness checks:
+
+1. Run formatting, linting, build, tests, and anything else the repo calls for.
+2. Push changes to CI and let it run; fix and problems.
+3. If automated code review is configured in CI, fix any high-priority problems; minor issues may be fixed at agent's discretion, and should be included in the log as a defect.
+
+At the end of implementation, the root agent generates `<change-dir>/<round-id>-report.ai.md`.
+The report is kept out of the `<round-dir>` for discoverability by the user.
+
+The report contains a summary of the implementation, based on the log, with a link to the log.
+Near the top, it contains any suggested intent changes, for clarification or correction.
+These changes are suggested in diff format, with markdown links to the files.
+
+## Intent conflicts
+
+While implementing, the agent may find that the intent is in conflict with itself, the code, best practices, or any other concern.
+
+If the conflict is not likely to cause major issues (agent's discretion) it should continue and log the conflict.
+
+If the conflict is major, the round is stopped, and the user notified of the problem with a suggested remedy.
+The remedy is often in the form of a suggested intent diff with a link to the file.
+
+A new round starts after the user corrects the problem.

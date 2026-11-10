@@ -21,7 +21,7 @@ Tell the user the full paths to these directories so they can easily open them i
 ## P2. Requirements and design
 
 Work from the worktree you created or already exists.
-Watch the `<change-worktree>/intent` directory for changes and react to them.
+Watch the `<change-worktree>/_intent` directory for changes and react to them.
 Use a small debounce timeout ~30s to avoid flapping.
 
 If the harness doesn't support watching, tell the user and look for changes when they respond.
