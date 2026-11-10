@@ -59,12 +59,19 @@ Run the repository's build, tests and checks: references in code changed. Fix an
 
 ## 2. Intent scaffolding
 
-1. Create `<repo>/_intent/_intent.md`, empty.
-2. Create `<repo>/_intent/.gitignore` containing `*.ai.md` and `*.gen.md`, and make sure the root `.gitignore` ignores `.changes` and `.worktrees`. The HDD skills rely on these.
-3. Copy the HDD skill intent from `<hdd-repo>/_intent/skills/` (`_skills.md`, `hdd-change.md`, `hdd-implement.md`, `hdd-backfill.md`) into `<repo>/_intent/skills/`.
-4. Build the skills from that intent into `<repo>/skills/<name>/SKILL.md`. `<hdd-repo>/skills/` holds builds of the same intent; copy them, including their `scripts/`, unless the user has changed the intent. Symlink each skill into `<repo>/.claude/skills/` and `<repo>/.agents/skills/`.
+1. Create the `<repo>/_intent/` directory with a `.gitignore` in it, copied from `<hdd-repo>/_intent/.gitignore` (it ignores `*.ai.md` and `*.gen.md`). Make sure the root `.gitignore` ignores `.changes` and `.worktrees`; the HDD skills rely on these.
+2. Create `<repo>/_intent/_intent.md` with exactly:
 
-Commit the scaffolding and skills.
+   ```md
+   # Intent
+
+   This directory describes what the software does, following [human-driven-development](https://github.com/Yona-Appletree/human-driven-development).
+   ```
+
+3. Copy the HDD skill intent from `<hdd-repo>/_intent/skills/` (`_skills.md`, `hdd-change.md`, `hdd-implement.md`, `hdd-backfill.md`) into `<repo>/_intent/skills/`.
+4. Offer to copy the hygiene intent (`<hdd-repo>/_intent/hygine.md`: markdown formatting, spell checking, editor configs) as well. Let the user decide.
+5. Commit the copied intent as an intent commit (no co-authorship trailer: it's the HDD authors' intent, copied, not written by you).
+6. Implement the initial intent (the skills, and hygiene if chosen) with the `hdd-implement` skill. The repository doesn't have it yet, so follow `<hdd-repo>/skills/hdd-implement/SKILL.md`. `<hdd-repo>/skills/` holds builds of the same skill intent, including their `scripts/`; use them as the reference builds. The skills go in `<repo>/skills/<name>/`, symlinked into `<repo>/.claude/skills/` and `<repo>/.agents/skills/`.
 
 ## 3. The first intent statement
 
