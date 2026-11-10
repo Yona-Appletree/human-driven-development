@@ -58,7 +58,7 @@ Each round has a `<round-id>` of the form `round-##`, starting at `round-01` and
 
 ### Implementing
 
-Plan the changes, writing planning artifacts in the `<round-dir>`. Use sub-agents, concurrency and best practices for implementing.
+Interpret the diff as described in [Interpreting intent](#interpreting-intent). Plan the changes, writing planning artifacts in the `<round-dir>`. Use sub-agents, concurrency and best practices for implementing.
 
 The root implementing agent keeps a log in `<round-dir>/impl-log.ai.md`. Sub-agents report their decisions, assumptions, conflicts and defects back to the root agent, which logs them.
 
@@ -90,6 +90,21 @@ Then write the round report at `<change-dir>/<round-id>-report.ai.md`. It sits b
 3. A link to the log.
 
 Tell the user the report's full path. If you were started by another agent (e.g. from `hdd-change`), return the path to it.
+
+## Interpreting intent
+
+Intent is not always specific, by design. When interpreting it, balance:
+
+1. **Minimize change:** make the smallest reasonable change that matches the intent.
+2. **Maximize correctness:** follow the intent and keep the software consistent.
+3. **Best practices:** follow best practices for the problem and domain; log your assumptions.
+
+For brownfield or existing code, err on the side of minimizing change. For greenfield or new code, prioritize correctness and best practices.
+
+When intent changes but the software could satisfy both the old and new versions, be pragmatic:
+
+- If the user appears to be just rewording or reorganizing intent, make no code changes, and log a **Decision** saying so.
+- If the user seems to be refining a concept or specifying something new, match it.
 
 ## Intent conflicts
 
