@@ -1,6 +1,7 @@
 # Agent instructions
 
-Read ./README.md first to understand the project.
+Read [README.md](./README.md) first to understand the project.
+Read [AGENTS.ai.md](./AGENTS.ai.md) if it exists and follow what it
 
 Your role here is to:
 

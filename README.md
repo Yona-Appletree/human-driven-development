@@ -58,7 +58,7 @@ Using `_`-prefixed files is encourged to keep
 Example:
 
 ```text
-intent/
+_intent/
   frontend/
     _frontend.md
     shell.md
@@ -77,7 +77,8 @@ intent/
 
 ## Process
 
-An `intent/` directory holds intent at the root of the project.
+An `_intent/` directory holds intent at the root of the project.
+The `_` prefix ensures it appears first in diffs and file listings.
 
 To make a change:
 
